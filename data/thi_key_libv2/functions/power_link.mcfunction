@@ -1,0 +1,1 @@
+power grant @s thi_key_example:power_link

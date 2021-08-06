@@ -1,0 +1,604 @@
+{
+	"type": "apoli:multiple",
+
+	"click": {
+		"type": "apoli:active_self",
+		"entity_action": {
+			"type": "apoli:and",
+			"actions": [
+				{
+					"type": "apoli:execute_command",
+					"command": "scoreboard players add @s thi_c.d.p 1"
+				},
+				{
+					"type": "apoli:if_else",
+					"condition": {
+						"type": "apoli:scoreboard",
+						"objective": "thi_c.d.p",
+						"comparison": "==",
+						"compare_to": 1
+					},
+					"if_action": {
+						"type": "apoli:and",
+						"actions": [
+							{
+								"type": "apoli:execute_command",
+								"command": "#say push primary pt"
+							},
+							{
+								"type": "apoli:and",
+								"actions": [
+									{
+										"type": "apoli:execute_command",
+										"command": "function thi_key_libv2:update_slot"
+									},
+									{
+										"type": "apoli:if_else",
+										"condition": {
+											"type": "apoli:or",
+											"conditions": [
+												{
+													"type": "apoli:power_active",
+													"power": "*:*_slot0"
+												},
+												{
+													"type": "apoli:power_active",
+													"power": "*:*_slot1"
+												},
+												{
+													"type": "apoli:power_active",
+													"power": "*:*_slot2"
+												},
+												{
+													"type": "apoli:power_active",
+													"power": "*:*_slot3"
+												},
+												{
+													"type": "apoli:power_active",
+													"power": "*:*_slot4"
+												},
+												{
+													"type": "apoli:power_active",
+													"power": "*:*_slot5"
+												},
+												{
+													"type": "apoli:power_active",
+													"power": "*:*_slot6"
+												},
+												{
+													"type": "apoli:power_active",
+													"power": "*:*_slot7"
+												},
+												{
+													"type": "apoli:power_active",
+													"power": "*:*_slot8"
+												}
+											]
+										},
+										"if_action": {
+											"type": "apoli:and",
+											"actions": [
+												{
+													"type": "apoli:if_else_list",
+													"actions": [
+														{
+															"condition": {
+																"type": "apoli:power_active",
+																"power": "*:*_slot0"
+															},
+															"action": {
+																"type": "apoli:execute_command",
+																"command": "scoreboard players operation @s thi_p.a = @s thi_ps00"
+															}
+														},
+														{
+															"condition": {
+																"type": "apoli:power_active",
+																"power": "*:*_slot1"
+															},
+															"action": {
+																"type": "apoli:execute_command",
+																"command": "scoreboard players operation @s thi_p.a = @s thi_ps01"
+															}
+														},
+														{
+															"condition": {
+																"type": "apoli:power_active",
+																"power": "*:*_slot2"
+															},
+															"action": {
+																"type": "apoli:execute_command",
+																"command": "scoreboard players operation @s thi_p.a = @s thi_ps02"
+															}
+														},
+														{
+															"condition": {
+																"type": "apoli:power_active",
+																"power": "*:*_slot3"
+															},
+															"action": {
+																"type": "apoli:execute_command",
+																"command": "scoreboard players operation @s thi_p.a = @s thi_ps03"
+															}
+														},
+														{
+															"condition": {
+																"type": "apoli:power_active",
+																"power": "*:*_slot4"
+															},
+															"action": {
+																"type": "apoli:execute_command",
+																"command": "scoreboard players operation @s thi_p.a = @s thi_ps04"
+															}
+														},
+														{
+															"condition": {
+																"type": "apoli:power_active",
+																"power": "*:*_slot5"
+															},
+															"action": {
+																"type": "apoli:execute_command",
+																"command": "scoreboard players operation @s thi_p.a = @s thi_ps05"
+															}
+														},
+														{
+															"condition": {
+																"type": "apoli:power_active",
+																"power": "*:*_slot6"
+															},
+															"action": {
+																"type": "apoli:execute_command",
+																"command": "scoreboard players operation @s thi_p.a = @s thi_ps06"
+															}
+														},
+														{
+															"condition": {
+																"type": "apoli:power_active",
+																"power": "*:*_slot7"
+															},
+															"action": {
+																"type": "apoli:execute_command",
+																"command": "scoreboard players operation @s thi_p.a = @s thi_ps07"
+															}
+														},
+														{
+															"condition": {
+																"type": "apoli:power_active",
+																"power": "*:*_slot8"
+															},
+															"action": {
+																"type": "apoli:execute_command",
+																"command": "scoreboard players operation @s thi_p.a = @s thi_ps08"
+															}
+														}
+													]
+												},
+												{
+													"type": "apoli:execute_command",
+													"command": "scoreboard players set @s thi_p.a.t 0"
+												},
+												{
+													"type": "apoli:execute_command",
+													"command": "function thi_key_libv2:power_link"
+												}
+											]
+										}
+									}
+								]
+							}
+						]
+					}
+				},
+				{
+					"type": "apoli:delay",
+					"ticks": 2,
+					"action": {
+						"type": "apoli:execute_command",
+						"command": "scoreboard players add @s thi_c.d.p.o 1"
+					}
+				},
+				{
+					"type": "apoli:delay",
+					"ticks": 5,
+					"action": {
+						"type": "apoli:if_else",
+						"condition": {
+							"type": "apoli:and",
+							"conditions": [
+								{
+									"type": "apoli:command",
+									"command": "execute if score @s thi_c.d.p.o = @s thi_c.d.p",
+									"comparison": "==",
+									"compare_to": 1
+								},
+								{
+									"type": "apoli:scoreboard",
+									"objective": "thi_c.d.p",
+									"comparison": ">",
+									"compare_to": 0
+								}
+							]
+						},
+						"if_action": {
+							"type": "apoli:and",
+							"actions": [
+								{
+									"type": "apoli:execute_command",
+									"command": "#say release primary pt"
+								},
+								{
+									"type": "apoli:and",
+									"actions": [
+										{
+											"type": "apoli:execute_command",
+											"command": "function thi_key_libv2:update_slot"
+										},
+										{
+											"type": "apoli:if_else",
+											"condition": {
+												"type": "apoli:or",
+												"conditions": [
+													{
+														"type": "apoli:power_active",
+														"power": "*:*_slot0"
+													},
+													{
+														"type": "apoli:power_active",
+														"power": "*:*_slot1"
+													},
+													{
+														"type": "apoli:power_active",
+														"power": "*:*_slot2"
+													},
+													{
+														"type": "apoli:power_active",
+														"power": "*:*_slot3"
+													},
+													{
+														"type": "apoli:power_active",
+														"power": "*:*_slot4"
+													},
+													{
+														"type": "apoli:power_active",
+														"power": "*:*_slot5"
+													},
+													{
+														"type": "apoli:power_active",
+														"power": "*:*_slot6"
+													},
+													{
+														"type": "apoli:power_active",
+														"power": "*:*_slot7"
+													},
+													{
+														"type": "apoli:power_active",
+														"power": "*:*_slot8"
+													}
+												]
+											},
+											"if_action": {
+												"type": "apoli:and",
+												"actions": [
+													{
+														"type": "apoli:if_else_list",
+														"actions": [
+															{
+																"condition": {
+																	"type": "apoli:power_active",
+																	"power": "*:*_slot0"
+																},
+																"action": {
+																	"type": "apoli:execute_command",
+																	"command": "scoreboard players operation @s thi_p.a = @s thi_ps00"
+																}
+															},
+															{
+																"condition": {
+																	"type": "apoli:power_active",
+																	"power": "*:*_slot1"
+																},
+																"action": {
+																	"type": "apoli:execute_command",
+																	"command": "scoreboard players operation @s thi_p.a = @s thi_ps01"
+																}
+															},
+															{
+																"condition": {
+																	"type": "apoli:power_active",
+																	"power": "*:*_slot2"
+																},
+																"action": {
+																	"type": "apoli:execute_command",
+																	"command": "scoreboard players operation @s thi_p.a = @s thi_ps02"
+																}
+															},
+															{
+																"condition": {
+																	"type": "apoli:power_active",
+																	"power": "*:*_slot3"
+																},
+																"action": {
+																	"type": "apoli:execute_command",
+																	"command": "scoreboard players operation @s thi_p.a = @s thi_ps03"
+																}
+															},
+															{
+																"condition": {
+																	"type": "apoli:power_active",
+																	"power": "*:*_slot4"
+																},
+																"action": {
+																	"type": "apoli:execute_command",
+																	"command": "scoreboard players operation @s thi_p.a = @s thi_ps04"
+																}
+															},
+															{
+																"condition": {
+																	"type": "apoli:power_active",
+																	"power": "*:*_slot5"
+																},
+																"action": {
+																	"type": "apoli:execute_command",
+																	"command": "scoreboard players operation @s thi_p.a = @s thi_ps05"
+																}
+															},
+															{
+																"condition": {
+																	"type": "apoli:power_active",
+																	"power": "*:*_slot6"
+																},
+																"action": {
+																	"type": "apoli:execute_command",
+																	"command": "scoreboard players operation @s thi_p.a = @s thi_ps06"
+																}
+															},
+															{
+																"condition": {
+																	"type": "apoli:power_active",
+																	"power": "*:*_slot7"
+																},
+																"action": {
+																	"type": "apoli:execute_command",
+																	"command": "scoreboard players operation @s thi_p.a = @s thi_ps07"
+																}
+															},
+															{
+																"condition": {
+																	"type": "apoli:power_active",
+																	"power": "*:*_slot8"
+																},
+																"action": {
+																	"type": "apoli:execute_command",
+																	"command": "scoreboard players operation @s thi_p.a = @s thi_ps08"
+																}
+															}
+														]
+													},
+													{
+														"type": "apoli:execute_command",
+														"command": "scoreboard players set @s thi_p.a.t 1"
+													},
+													{
+														"type": "apoli:execute_command",
+														"command": "function thi_key_libv2:power_link"
+													}
+												]
+											}
+										}
+									]
+									
+								},
+								{
+									"type": "apoli:execute_command",
+									"command": "scoreboard players set @s thi_c.d.p 0"
+								},
+								{
+									"type": "apoli:execute_command",
+									"command": "scoreboard players set @s thi_c.d.p.o 0"
+								}
+							]
+						}
+					}
+				}
+			]
+		},
+		"cooldown": 0,
+		"hud_render": {
+				"should_render": false
+		},
+		"key": {
+			"key": "key.origins.primary_active",
+			"continuous": true
+		}
+	},
+	
+	"slot0": {
+		"type": "apoli:simple",
+		"condition": { 
+			"type": "apoli:and",
+			"conditions": [
+				{
+					"type": "apoli:scoreboard",
+					"objective": "thi_ps00",
+					"comparison": ">=",
+					"compare_to": 0
+				},
+				{
+					"type": "apoli:scoreboard",
+					"objective": "thi_sl",
+					"comparison": "==",
+					"compare_to": 0
+				}
+			]
+		}
+	},
+	
+	"slot1": {
+		"type": "apoli:simple",
+		"condition": { 
+			"type": "apoli:and",
+			"conditions": [
+				{
+					"type": "apoli:scoreboard",
+					"objective": "thi_ps01",
+					"comparison": ">=",
+					"compare_to": 0
+				},
+				{
+					"type": "apoli:scoreboard",
+					"objective": "thi_sl",
+					"comparison": "==",
+					"compare_to": 1
+				}
+			]
+		}
+	},
+	
+	"slot2": {
+		"type": "apoli:simple",
+		"condition": { 
+			"type": "apoli:and",
+			"conditions": [
+				{
+					"type": "apoli:scoreboard",
+					"objective": "thi_ps02",
+					"comparison": ">=",
+					"compare_to": 0
+				},
+				{
+					"type": "apoli:scoreboard",
+					"objective": "thi_sl",
+					"comparison": "==",
+					"compare_to": 2
+				}
+			]
+		}
+	},
+	
+	"slot3": {
+		"type": "apoli:simple",
+		"condition": { 
+			"type": "apoli:and",
+			"conditions": [
+				{
+					"type": "apoli:scoreboard",
+					"objective": "thi_ps03",
+					"comparison": ">=",
+					"compare_to": 0
+				},
+				{
+					"type": "apoli:scoreboard",
+					"objective": "thi_sl",
+					"comparison": "==",
+					"compare_to": 3
+				}
+			]
+		}
+	},
+	
+	"slot4": {
+		"type": "apoli:simple",
+		"condition": { 
+			"type": "apoli:and",
+			"conditions": [
+				{
+					"type": "apoli:scoreboard",
+					"objective": "thi_ps04",
+					"comparison": ">=",
+					"compare_to": 0
+				},
+				{
+					"type": "apoli:scoreboard",
+					"objective": "thi_sl",
+					"comparison": "==",
+					"compare_to": 4
+				}
+			]
+		}
+	},
+	
+	"slot5": {
+		"type": "apoli:simple",
+		"condition": { 
+			"type": "apoli:and",
+			"conditions": [
+				{
+					"type": "apoli:scoreboard",
+					"objective": "thi_ps05",
+					"comparison": ">=",
+					"compare_to": 0
+				},
+				{
+					"type": "apoli:scoreboard",
+					"objective": "thi_sl",
+					"comparison": "==",
+					"compare_to": 5
+				}
+			]
+		}
+	},
+	
+	"slot6": {
+		"type": "apoli:simple",
+		"condition": { 
+			"type": "apoli:and",
+			"conditions": [
+				{
+					"type": "apoli:scoreboard",
+					"objective": "thi_ps06",
+					"comparison": ">=",
+					"compare_to": 0
+				},
+				{
+					"type": "apoli:scoreboard",
+					"objective": "thi_sl",
+					"comparison": "==",
+					"compare_to": 6
+				}
+			]
+		}
+	},
+	
+	"slot7": {
+		"type": "apoli:simple",
+		"condition": { 
+			"type": "apoli:and",
+			"conditions": [
+				{
+					"type": "apoli:scoreboard",
+					"objective": "thi_ps07",
+					"comparison": ">=",
+					"compare_to": 0
+				},
+				{
+					"type": "apoli:scoreboard",
+					"objective": "thi_sl",
+					"comparison": "==",
+					"compare_to": 7
+				}
+			]
+		}
+	},
+	
+	"slot8": {
+		"type": "apoli:simple",
+		"condition": { 
+			"type": "apoli:and",
+			"conditions": [
+				{
+					"type": "apoli:scoreboard",
+					"objective": "thi_ps08",
+					"comparison": ">=",
+					"compare_to": 0
+				},
+				{
+					"type": "apoli:scoreboard",
+					"objective": "thi_sl",
+					"comparison": "==",
+					"compare_to": 8
+				}
+			]
+		}
+	}
+	
+}

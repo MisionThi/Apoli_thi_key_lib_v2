@@ -1,0 +1,52 @@
+{
+	"type": "apoli:multiple",
+	
+	"add": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:if_else_list",
+			"actions": [
+				{
+					"condition": {
+						"type": "origins:resource",
+						"resource": "*:*_global",
+						"comparison": ">=",
+						"compare_to": 1
+					},
+					"action": {
+						"type": "origins:change_resource",
+						"resource": "*:*_global",
+						"change": 1
+					}
+				}
+			]
+		},
+		"interval": 20
+	},
+	
+	"global": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 10,
+		"max_action": {
+			"type": "origins:delay",
+			"ticks": 20,
+			"action": {
+				"type": "origins:change_resource",
+				"resource": "*:*_global",
+				"change": -10
+			}
+		},
+		"hud_render": {
+			"sprite_location": "origins:textures/gui/resource_bar.png",
+			"bar_index": 1,
+			"should_render": true,
+			"condition": {
+				"type": "origins:resource",
+				"resource": "*:*_global",
+				"comparison": ">=",
+				"compare_to": 1
+			}
+		}
+	}
+}

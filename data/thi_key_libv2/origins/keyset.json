@@ -1,0 +1,14 @@
+{
+	"powers":
+	[
+		"thi_key_libv2:click_detection/p",
+		"thi_key_libv2:click_detection/s"
+
+		
+	],
+	"icon": "minecraft:grass_block",
+	"order": 13,
+	"impact": 0,
+	"name": "Keys",
+	"description": "Just a test origin."
+}

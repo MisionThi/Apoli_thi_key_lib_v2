@@ -1,0 +1,42 @@
+{
+	"type": "apoli:multiple",
+	
+	"active": {
+		"type": "apoli:resource",
+		"min": 0,
+		"max": 3,
+		"start_value": 3,
+		"hud_render": {
+				"should_render": false
+		}
+	},
+	
+	"main": {
+		"type": "apoli:simple",
+		"condition": {
+			"type": "apoli:resource",
+			"resource": "*:*_active",
+			"comparison": "==",
+			"compare_to": 3
+		}
+	},
+	
+	"scroll_check": {
+		"type": "apoli:simple"
+	},
+	
+	"power": {
+		"type": "apoli:action_over_time",
+		"entity_action": {
+			"type": "apoli:execute_command",
+			"command": "say power 4 active"
+		},
+		"interval": 1,
+		"condition": {
+			"type": "apoli:resource",
+			"resource": "*:*_active",
+			"comparison": "==",
+			"compare_to": 3
+		}
+	}
+}
